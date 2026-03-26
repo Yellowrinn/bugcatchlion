@@ -1,0 +1,52 @@
+body {
+    background-image : url('background.png');
+    background-size: cover;
+}
+
+/* 모달 배경 */
+.yelin_introduce {
+    position: fixed;
+    display: none;
+
+    justify-content: center;
+    align-items: center; /* 가운데 정렬 핵심 */
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* 모달 내용 */
+.modal_body {
+    width: 400px;
+    height: 300px;
+
+    padding: 30px;
+    text-align: center;
+
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* 버튼 */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+.close{
+    position: relative;
+    right: 10px;
+    top: 10px;
+    background-color: rgba(0,0,0,0);
+    width: 30px;
+    height: 30px;
+    padding: 30px;
+    margin-right: 200px;
+}
