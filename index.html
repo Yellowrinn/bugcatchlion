@@ -3,18 +3,50 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            background-color: #f0f0f0;
+        }
+
+        #movingElement {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+            transition: all 0.5s ease-in-out;
+            border-radius: 50%;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="modal">
-        <div class="modal_popup">
-            <h3>팝업 테스트</h3>
-            <p>내용 테스트</p>
-            <button type="button" class="close_btn">닫기</button>
-        </div>
-    </div>
+
+    <div id="movingElement"></div>
+
+    <script>
+        const element = document.getElementById('movingElement');
+
+        function moveRandomly() {
+
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+
+
+            const newX = Math.random() * (windowWidth - 50);
+            const newY = Math.random() * (windowHeight - 50);
+
+
+            element.style.left = newX + 'px';
+            element.style.top = newY + 'px';
+        }
+
+
+        setInterval(moveRandomly, 1000);
+    </script>
+
 </body>
 
 </html>
