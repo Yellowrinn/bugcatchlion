@@ -1,12 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const bugs = [
-        document.getElementById('bug1'),
-        document.getElementById('bug2'),
-        document.getElementById('bug3'),
-        document.getElementById('bug4')
-    ]
+    const bugs = document.querySelectorAll('.bug');
 
     function moveRandomly() {
+        if (isPaused) return;
 
         const windowWidth = window.innerWidth;
         const windowHeight = window.innerHeight;
