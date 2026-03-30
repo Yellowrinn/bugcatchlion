@@ -12,6 +12,9 @@ body {
 
 .bgimg img {
     position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .bug {
@@ -28,4 +31,44 @@ body {
     height: 40px;
     position: absolute;
     transition: all 0.7s ease-in-out;
+}
+
+/* 모달 스타일 */
+.yelin_introduce {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal_body {
+    width: 400px;
+    height: 300px;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: rgba(0,0,0,0);
+    width: 30px;
+    height: 30px;
+    padding: 30px;
 }
