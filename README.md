@@ -8,12 +8,12 @@
 ---
 
 ## 👩‍💻 Team Members & Roles
-| 이름 | 담당 역할 및 기능 | 브랜치 |
+| 이름 | 담당 역할 및 기능 | 작성 항목 |
 | :--- | :--- | :--- |
-| **김의지** | 비주얼 리소스 제작 |  |
-| **정유담** | 랜덤으로 날아다니는 버그 구현 | `yudam` |
-| **채예린** | 모달창 & 자기소개 페이지 구현 |  |
-| **장가윤** | `hover` 기능 구현 |  |
+| 김의지 | 비주얼 리소스 제작 | `media/` |
+| 정유담 | 랜덤 이동 버그 구현  | `index.html`, `style.css (modal 이전까지)`, `script.js`, `modal.js` |
+| 채예린 | 모달창 및 자기소개 페이지 구현 | `main.html(->index.html에 결합)`, `style.css (modal 부터)` |
+| 장가윤 | 사자 커서, modal 호버 시 부유효과 | `lion.css`,`shadow.css`,`shadow.js` | 
 
 ---
 

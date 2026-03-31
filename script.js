@@ -1,39 +1,35 @@
+// 벌레 이동 상태를 관리하는 변수 - false:이동 중, true: 정지
+let isPaused = false;
+
 document.addEventListener('DOMContentLoaded', () => {
-    const bug1 = document.getElementById('bug1');
-    const bug2 = document.getElementById('bug2');
-    // const bug3 = document.getElementById('bug3');
-    // const bug4 = document.getElementById('bug4');
 
+    // .bug 클래스를 가진 모든 요소 선택 (NodeList)
+    const bugs = document.querySelectorAll('.bug');
 
+    // 버그들을 랜덤으로 위치시키는 함수
     function moveRandomly() {
+        // 일시정지 상태면 실행하지 않음
+        if (isPaused) return;
+
+        // 현재 브라우저 화면 크기 가져오기
         const windowWidth = window.innerWidth;
         const windowHeight = window.innerHeight;
 
-        const BUG1X = Math.random() * (windowWidth - 50);
-        const BUG1Y = Math.random() * (windowHeight - 50);
-
-        const BUG2X = Math.random() * (windowWidth - 50);
-        const BUG2Y = Math.random() * (windowHeight - 50);
-
-        // const BUG3X = Math.random() * (windowWidth - 50);
-        // const BUG3Y = Math.random() * (windowHeight - 50);
-
-        // const BUG4X = Math.random() * (windowWidth - 50);
-        // const BUG4Y = Math.random() * (windowHeight - 50);
-
-
-        bug1.style.left = BUG1X + 'px';
-        bug1.style.top = BUG1Y + 'px';
-
-        bug2.style.left = BUG2X + 'px';
-        bug2.style.top = BUG2Y + 'px';
-
-        // bug3.style.left = BUG3X + 'px';
-        // bug3.style.top = BUG3Y + 'px';
-
-        // bug4.style.left = BUG4X + 'px';
-        // bug4.style.top = BUG4Y + 'px';
+        // 각 bug 요소를 순회하면서 위치 변경
+        bugs.forEach(bug => {
+            // 화면 범위 내 랜덤으로 좌표 생성 (50px은 크기 여유를 위해)
+            const x = Math.random() * (windowWidth - 50);
+            const y = Math.random() * (windowHeight - 50);
+            // CSS 위치 값 적용
+            bug.style.left = `${x}px`;
+            bug.style.top = `${y}px`;
+        });
     }
 
+    // 최초 1회 즉시 실행
+    // 이 코드를 호출하지 않으면 bug 요소들이 초기 위치에 자리함
+    // 따라서 페이지 로드 직후 실행하여 각 요소들은 랜덤 위치로 배치
+    moveRandomly();
+    // 1.5초마다 반복 실행 -> 계속 랜덤 이동
     setInterval(moveRandomly, 1500);
 });

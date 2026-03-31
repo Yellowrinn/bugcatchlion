@@ -1,5 +1,5 @@
 /* 카드 이름 프로필 카드로 바꾸기 */
-.profile-card {
+.modal_body {
     /* 테스트를 위한 코드 여기 위치에 프로필 카드 css 코드 넣기
     width: 200px;
     height: 300px;
@@ -10,14 +10,14 @@
     /* 모든 변화를 0.3초 동안 부드럽게 보여줌 
         그림자가 확 생기지 않고 스르륵 나타남. */
     transition: all 0.3s ease;
-    
+
 }
 
-.profile-card.active-shadow {
+.modal_body.active-shadow {
     /* 그림자 효과: 오른쪽으로 0, 아래로 15px, 퍼짐 정도 30px, 검은색 20% 투명도 */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); 
-    
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+
     /* 카드를 위쪽으로 10px만큼 이동
        카드가 공중에 떠오르는 효과 */
-    transform: translateY(-10px); 
+    transform: translateY(-10px);
 }

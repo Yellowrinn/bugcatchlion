@@ -1,33 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     height: 100vh;
     margin: 0;
     overflow: hidden;
+    position: relative;
 }
 
-#bug1 {
+.bgimg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bug {
     width: 40px;
     height: 40px;
     position: absolute;
-    transition: all 0.7s ease-in-out;
+    transition: left 0.7s ease-in-out, top 0.7s ease-in-out;
 }
 
-#bug2 {
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    transition: all 0.7s ease-in-out;
-}
-
-/* #bug3 {
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    transition: all 0.3s ease-in-out;
-}
-
+#bug1,
+#bug2,
+#bug3,
 #bug4 {
     width: 40px;
     height: 40px;
+}
+
+/* 모달 스타일 */
+.modal {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal_body {
+    width: 400px;
+    height: 300px;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+
+.close {
+    border: none;
     position: absolute;
-    transition: all 0.3s ease-in-out;
-} */
+    right: 10px;
+    top: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    width: 30px;
+    height: 30px;
+    padding: 30px;
+
+}
