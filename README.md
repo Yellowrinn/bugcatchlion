@@ -11,8 +11,8 @@
 | 이름 | 담당 역할 및 기능 | 작성 항목 |
 | :--- | :--- | :--- |
 | 김의지 | 비주얼 리소스 제작 | `media/` |
-| 정유담 | 랜덤 이동 버그 구현  | `index.html`, `style.css (modal 이전까지)`, `script.js`, `modal.js (마우스오버 부분)` |
-| 채예린 | 모달창 및 자기소개 페이지 구현 | `main.html(->index.html에 결합)`, `style.css (modal 부터)` |
+| 정유담 | 랜덤 이동 버그 구현  | `index.html`, `style.css 일부`, `script.js` |
+| 채예린 | 모달창 및 자기소개 페이지 구현 | `main.html(->index.html에 결합)`, `modal.js`, `style.css 일부` |
 | 장가윤 | 사자 커서, modal 호버 시 부유효과 | `lion.css`,`shadow.css`,`shadow.js` | 
 
 ---

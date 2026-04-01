@@ -32,6 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // 이 코드를 호출하지 않으면 bug 요소들이 초기 위치에 자리함
     // 따라서 페이지 로드 직후 실행하여 각 요소들은 랜덤 위치로 배치
     moveRandomly();
-    // 1.5초마다 반복 실행 -> 계속 랜덤 이동
+    // 2초마다 반복 실행 -> 계속 랜덤 이동
     setInterval(moveRandomly, 2000);
 });
