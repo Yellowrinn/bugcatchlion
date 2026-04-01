@@ -21,6 +21,12 @@ body {
     width: 40px;
     height: 40px;
     position: absolute;
+    /* 
+    left, top 좌표를 자바스크립트로 제어하여 요소를 자유롭게 이동시키기 위해
+    transition 속성 : 부드러운 이동
+    ease-in-out : 느리게 - 빠르게 - 느리게 변화
+    -> 버그 요소가 부드럽게 이동하도록 함
+    */
     transition: left 0.7s ease-in-out, top 0.7s ease-in-out;
 }
 
@@ -53,7 +59,18 @@ body {
     position: relative;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal_body:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.modal_body h2 {
+    font-size: 30px;
+}
+
+.modal_body p {
+    font-size: 20px;
 }
 
 button {
@@ -63,13 +80,10 @@ button {
 
 
 .close {
-    border: none;
     position: absolute;
-    right: 10px;
     top: 10px;
-    background-color: rgba(0, 0, 0, 0);
-    width: 30px;
-    height: 30px;
-    padding: 30px;
-
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
 }

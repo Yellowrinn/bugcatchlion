@@ -20,9 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
             // 화면 범위 내 랜덤으로 좌표 생성 (50px은 크기 여유를 위해)
             const x = Math.random() * (windowWidth - 50);
             const y = Math.random() * (windowHeight - 50);
+            const angle = Math.random() * 360;
             // CSS 위치 값 적용
             bug.style.left = `${x}px`;
             bug.style.top = `${y}px`;
+            bug.style.transform = `rotate(${angle}deg)`;
         });
     }
 
@@ -31,5 +33,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // 따라서 페이지 로드 직후 실행하여 각 요소들은 랜덤 위치로 배치
     moveRandomly();
     // 1.5초마다 반복 실행 -> 계속 랜덤 이동
-    setInterval(moveRandomly, 1500);
+    setInterval(moveRandomly, 2000);
 });

@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.bgimg img {
+    position: absolute;
+}
+
+.bug {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+}
+
+#bug1,
+#bug2,
+#bug3,
+#bug4 {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    transition: all 0.7s ease-in-out;
+}
